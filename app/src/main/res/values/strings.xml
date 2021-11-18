@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android No Architect</string>
+    <string name="button_buttons">Buttons styles</string>
+    <string name="going_back">Going back</string>
+    <string name="fifteenth_the_game">Fifteenth the Game</string>
+    <string name="themed_button">Themed Button</string>
+    <string name="appcompatbutton_button">AppCompatButton Button</string>
+    <string name="material_button">Material Button</string>
 </resources>

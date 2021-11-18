@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ButtonsActivity">
+
+    <Button
+        android:id="@+id/buttonButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/themed_button">
+    </Button>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appcompatbutton_button">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/material_button">
+    </com.google.android.material.button.MaterialButton>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/going_back">
+    </Button>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

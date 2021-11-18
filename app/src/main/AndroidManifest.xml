@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidNoArchitect">
         <activity
+            android:name=".FifteenthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ButtonsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
