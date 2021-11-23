@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidNoArchitect">
         <activity
+            android:name=".ViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CanvasActivity"
+            android:exported="false" />
+        <activity
             android:name=".FifteenthActivity"
             android:exported="false" />
         <activity
