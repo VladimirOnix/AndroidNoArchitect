@@ -1,14 +1,20 @@
 package com.sample.arch.forbidden;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.sample.arch.forbidden.adapter.ListAdapter;
 
 public class AdapterActivity extends AppCompatActivity {
+    private final String TAG = this.getClass().getName();
 
     private RecyclerView mRecyclerView;
     private ListAdapter mListAdapter;
@@ -28,6 +34,14 @@ public class AdapterActivity extends AppCompatActivity {
         mListAdapter = new ListAdapter(names);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mListAdapter);
+        mListAdapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = ((TextView)view).getText().toString();
+                Log.w(TAG,"Clicked:" + text);
+                showDialog(text);
+            }
+        });
     }
 
     private String getName(int length){
@@ -41,5 +55,10 @@ public class AdapterActivity extends AppCompatActivity {
 
     private char getChar(){
         return (char)((int)'a' + (int)(27 * Math.random()));
+    }
+
+    private void showDialog(String text){
+        MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this).setMessage(R.string.app_name).setTitle(text);
+        dialog.create().show();
     }
 }

@@ -11,7 +11,8 @@ import com.sample.arch.forbidden.R;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
-    private String[] localDataSet;
+    private String[] mLocalDataSet;
+    private static View.OnClickListener mOnClickListener;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
@@ -19,6 +20,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.textView);
+            textView.setClickable(true);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mOnClickListener!=null) {
+                        mOnClickListener.onClick(v);
+                    }
+                }
+            });
         }
 
         public TextView getTextView() {
@@ -27,7 +37,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public ListAdapter(String[] dataSet) {
-        localDataSet = dataSet;
+        mLocalDataSet = dataSet;
     }
 
     @Override
@@ -40,11 +50,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.getTextView().setText(localDataSet[position]);
+        viewHolder.getTextView().setText(mLocalDataSet[position]);
     }
 
     @Override
     public int getItemCount() {
-        return localDataSet.length;
+        return mLocalDataSet.length;
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        mOnClickListener = listener;
     }
 }
