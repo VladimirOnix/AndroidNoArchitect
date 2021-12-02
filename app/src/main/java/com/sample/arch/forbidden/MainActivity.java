@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonFifteenth;
     private Button mButtonCanvas;
     private Button mButtonViews;
+    private Button mButtonAdapters;
 
     private Spinner mSpinnerViews;
     private ArrayAdapter<?> spinnerViewsAdapter;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonFifteenth = findViewById(R.id.buttonFifteenth);
         mButtonCanvas = findViewById(R.id.buttonCanvas);
         mButtonViews = findViewById(R.id.buttonViews);
+        mButtonAdapters = findViewById(R.id.buttonAdapters);
 
         mSpinnerViews = findViewById(R.id.spinnerViews);
         spinnerViewsAdapter = ArrayAdapter.createFromResource(this, R.array.view_init_types,
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonButtons.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, ButtonsActivity.class)));
         mButtonFifteenth.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, FifteenthActivity.class)));
         mButtonCanvas.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, CanvasActivity.class)));
+        mButtonAdapters.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, AdapterActivity.class)));
         mButtonViews.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ViewActivity.class);
             intent.putExtra(BUNDLE_VIEW_TYPE, (int) mSpinnerViews.getSelectedItemId());

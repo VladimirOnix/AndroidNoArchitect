@@ -50,5 +50,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/buttonAdapters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adapter pattern"
+        app:layout_constraintTop_toBottomOf="@id/buttonViews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
