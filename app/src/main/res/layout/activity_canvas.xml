@@ -9,6 +9,9 @@
     <com.sample.arch.forbidden.canvas.CanvasView
         android:layout_width="128dp"
         android:layout_height="128dp"
+        cellWidth="4"
+        cellHeight="4"
+        android:background="@color/cardview_light_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

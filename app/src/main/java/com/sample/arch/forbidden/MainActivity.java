@@ -2,6 +2,8 @@ package com.sample.arch.forbidden;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -57,13 +59,15 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(BUNDLE_VIEW_TYPE, (int) mSpinnerViews.getSelectedItemId());
             MainActivity.this.startActivityForResult(intent,ACTIVITY_RESULT);
         });
+
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Log.w(TAG, "RequestCode " + requestCode + " " + "ResultCode " + resultCode);
-        if (requestCode == ACTIVITY_RESULT) {
+        if (requestCode == ACTIVITY_RESULT && resultCode == ACTIVITY_RESULT) {
             int result = data.getIntExtra(BUNDLE_RESULT_SELECTED,0);
             Snackbar snackbar = Snackbar.make(mButtonViews,"Returned " + result, BaseTransientBottomBar.LENGTH_SHORT);
             snackbar.show();

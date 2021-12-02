@@ -49,11 +49,11 @@ public class Board {
         return (mBoard.length - 2) * (mBoard[0].length - 2);
     }
 
-    private int getWidth() {
+    public int getWidth() {
         return mBoard[0].length - 2;
     }
 
-    private int getHeight() {
+    public int getHeight() {
         return mBoard.length - 2;
     }
 
