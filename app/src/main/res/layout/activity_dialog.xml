@@ -8,10 +8,30 @@
 
     <Button
         android:id="@+id/buttonDialogTitled"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/dialog_with_title_and_text"
         />
+
+    <Button
+        android:id="@+id/buttonDialogPlus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonDialogTitled"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Dialog Plus Library"
+        />
+
+    <Button
+        android:id="@+id/buttonDialogMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonDialogPlus"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Dialog Material Library"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

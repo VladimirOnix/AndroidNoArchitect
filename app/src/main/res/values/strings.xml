@@ -12,10 +12,22 @@
     <string name="adapter_pattern">Adapter pattern</string>
     <string name="dialog_with_title_and_text">Dialog with title and text</string>
 
-
     <string-array name="view_init_types">
         <item>From XML</item>
         <item>Button as View</item>
         <item>Linear Layout</item>
     </string-array>
+
+    <string-array name="dialog_plus_items">
+        <item>Number One</item>
+        <item>Number Two</item>
+        <item>Number Three</item>
+        <item>Number Four</item>
+        <item>Number Five</item>
+        <item>Number Six</item>
+        <item>Number Seven</item>
+        <item>Number Eight</item>
+        <item>Number Nine</item>
+    </string-array>
+
 </resources>
