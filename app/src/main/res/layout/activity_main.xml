@@ -54,8 +54,17 @@
         android:id="@+id/buttonAdapters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adapter pattern"
+        android:text="@string/adapter_pattern"
         app:layout_constraintTop_toBottomOf="@id/buttonViews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDialogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dialogs"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdapters"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

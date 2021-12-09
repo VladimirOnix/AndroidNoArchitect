@@ -9,6 +9,8 @@
     <string name="canvas_drawing">Canvas Drawing</string>
     <string name="coded_view">View in code</string>
     <string name="plane_xml_layouts">Plane XML layouts</string>
+    <string name="adapter_pattern">Adapter pattern</string>
+    <string name="dialog_with_title_and_text">Dialog with title and text</string>
 
 
     <string-array name="view_init_types">

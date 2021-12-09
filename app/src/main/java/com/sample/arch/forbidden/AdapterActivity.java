@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -19,6 +20,7 @@ public class AdapterActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ListAdapter mListAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +28,10 @@ public class AdapterActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recycleView);
 
-        String[] names = new String[64];
+
+        String[] names = new String[128];
         for(int i=0;i<names.length;i++){
-            names[i] = getName(8);
+            names[i] = getName(16);
         }
 
         mListAdapter = new ListAdapter(names);
@@ -54,7 +57,7 @@ public class AdapterActivity extends AppCompatActivity {
     }
 
     private char getChar(){
-        return (char)((int)'a' + (int)(27 * Math.random()));
+        return (char)((int)'a' + (int)(26 * Math.random()));
     }
 
     private void showDialog(String text){

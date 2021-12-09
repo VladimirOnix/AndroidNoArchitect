@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonCanvas;
     private Button mButtonViews;
     private Button mButtonAdapters;
+    private Button mButtonDialogs;
 
     private Spinner mSpinnerViews;
     private ArrayAdapter<?> spinnerViewsAdapter;
@@ -42,11 +43,13 @@ public class MainActivity extends AppCompatActivity {
         mButtonCanvas = findViewById(R.id.buttonCanvas);
         mButtonViews = findViewById(R.id.buttonViews);
         mButtonAdapters = findViewById(R.id.buttonAdapters);
+        mButtonDialogs = findViewById(R.id.buttonDialogs);
 
         mSpinnerViews = findViewById(R.id.spinnerViews);
         spinnerViewsAdapter = ArrayAdapter.createFromResource(this, R.array.view_init_types,
                 android.R.layout.simple_spinner_item);
         spinnerViewsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         mSpinnerViews.setAdapter(spinnerViewsAdapter);
     }
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonFifteenth.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, FifteenthActivity.class)));
         mButtonCanvas.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, CanvasActivity.class)));
         mButtonAdapters.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, AdapterActivity.class)));
+        mButtonDialogs.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, DialogActivity.class)));
         mButtonViews.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ViewActivity.class);
             intent.putExtra(BUNDLE_VIEW_TYPE, (int) mSpinnerViews.getSelectedItemId());
