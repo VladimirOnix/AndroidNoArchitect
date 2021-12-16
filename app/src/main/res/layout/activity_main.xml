@@ -61,10 +61,19 @@
 
     <Button
         android:id="@+id/buttonDialogs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialogs_button_text"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdapters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAnimations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dialogs"
-        app:layout_constraintTop_toBottomOf="@id/buttonAdapters"
+        android:text="@string/animations"
+        app:layout_constraintTop_toBottomOf="@id/buttonDialogs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
