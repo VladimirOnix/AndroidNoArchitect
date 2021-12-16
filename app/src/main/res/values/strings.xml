@@ -11,6 +11,8 @@
     <string name="plane_xml_layouts">Plane XML layouts</string>
     <string name="adapter_pattern">Adapter pattern</string>
     <string name="dialog_with_title_and_text">Dialog with title and text</string>
+    <string name="dialogs_button_text">Dialogs Examples</string>
+    <string name="animations">Animations</string>
 
     <string-array name="view_init_types">
         <item>From XML</item>

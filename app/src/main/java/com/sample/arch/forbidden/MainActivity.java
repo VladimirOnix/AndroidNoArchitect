@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
+import com.sample.arch.library.StaticLocator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonViews;
     private Button mButtonAdapters;
     private Button mButtonDialogs;
+    private Button mButtonAnimation;
 
     private Spinner mSpinnerViews;
     private ArrayAdapter<?> spinnerViewsAdapter;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonViews = findViewById(R.id.buttonViews);
         mButtonAdapters = findViewById(R.id.buttonAdapters);
         mButtonDialogs = findViewById(R.id.buttonDialogs);
+        mButtonAnimation = findViewById(R.id.buttonAnimations);
 
         mSpinnerViews = findViewById(R.id.spinnerViews);
         spinnerViewsAdapter = ArrayAdapter.createFromResource(this, R.array.view_init_types,
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         spinnerViewsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         mSpinnerViews.setAdapter(spinnerViewsAdapter);
+
+        String var = StaticLocator.LOCATOR_INIT;
     }
 
     @Override
@@ -61,13 +66,12 @@ public class MainActivity extends AppCompatActivity {
         mButtonCanvas.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, CanvasActivity.class)));
         mButtonAdapters.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, AdapterActivity.class)));
         mButtonDialogs.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, DialogActivity.class)));
+        mButtonAnimation.setOnClickListener(view -> MainActivity.this.startActivity(new Intent(MainActivity.this, AnimationActivity.class)));
         mButtonViews.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ViewActivity.class);
             intent.putExtra(BUNDLE_VIEW_TYPE, (int) mSpinnerViews.getSelectedItemId());
             MainActivity.this.startActivityForResult(intent,ACTIVITY_RESULT);
         });
-
-
     }
 
     @Override

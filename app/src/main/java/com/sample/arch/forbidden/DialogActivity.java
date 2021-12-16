@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -38,6 +39,8 @@ public class DialogActivity extends AppCompatActivity {
             }
         });
         builder.create().show();
+        AlertDialog dialog;
+
     }
 
     void showPlusDialog() {
@@ -48,6 +51,7 @@ public class DialogActivity extends AppCompatActivity {
                 .setOnItemClickListener(new OnItemClickListener() {
                     @Override
                     public void onItemClick(DialogPlus dialog, Object item, View view, int position) {
+
                     }
                 })
                 .setExpanded(true)
